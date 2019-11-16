@@ -1,29 +1,39 @@
-<template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
-  </div>
+<template lang="pug">
+div
+  NavBar
+  TodoList
+
 </template>
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import HelloWorld from "./components/HelloWorld.vue";
+import TodoList from "./components/TodoList.vue";
+import NavBar from "./components/NavBar/NavBar.vue";
+import { observer } from "mobx-vue";
 
+@observer
 @Component({
   components: {
-    HelloWorld
+    TodoList,
+    NavBar
   }
 })
 export default class App extends Vue {}
 </script>
 
 <style lang="less">
+body,
+html {
+  margin: 0;
+  height: 100%;
+}
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin: 0px;
+  padding: 0px;
 }
 </style>

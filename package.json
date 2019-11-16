@@ -11,6 +11,10 @@
   },
   "dependencies": {
     "core-js": "^3.3.2",
+    "mobx": "^5.14.2",
+    "mobx-vue": "^2.0.10",
+    "pug": "^2.0.4",
+    "pug-plain-loader": "^1.0.0",
     "register-service-worker": "^1.6.2",
     "vue": "^2.6.10",
     "vue-class-component": "^7.0.2",
